@@ -8,14 +8,14 @@
 
 body {
   font-family: 'Times New Roman', serif;
-  background-image: url('/Users/chris/roza-beauty-salon/src/images/Background.png'); /* Set the background image */
+  background-image: url('./images/Background.png'); /* Use a relative path */
   background-size: cover; /* Cover the entire viewport */
   background-attachment: fixed; /* Fixed background for a parallax effect */
   background-position: center; /* Center the background image */
   color: #333;
   margin: 0;
   overflow-x: hidden;
-  text-align: center; /* Center align all text */
+  text-align: center;
 }
 
 h1, h2 {
