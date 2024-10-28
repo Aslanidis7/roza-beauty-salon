@@ -1,0 +1,19 @@
+.social-media-links {
+  display: flex;
+  justify-content: center; /* Center the icons */
+  gap: 1rem; /* Space between icons */
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 50px; /* Set a fixed width for the icons */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}

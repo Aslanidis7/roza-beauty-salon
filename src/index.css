@@ -1,0 +1,364 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Smooth transition for all elements */
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  background-image: url('/Users/chris/roza-beauty-salon/src/images/Background.png'); /* Set the background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-attachment: fixed; /* Fixed background for a parallax effect */
+  background-position: center; /* Center the background image */
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+  text-align: center; /* Center align all text */
+}
+
+h1, h2 {
+  color: #2f2f2f;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
+
+h1:hover, h2:hover {
+  transform: scale(1.05);
+  color: #d94d79;
+}
+
+p, li {
+  color: #5a5a5a;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+p:hover, li:hover {
+  transform: scale(1.02);
+  color: #d94d79;
+}
+
+/* Remove underline from links */
+a {
+  color: #d94d79;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.05);
+  color: #ff6699;
+}
+
+/* Smooth fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Initial hidden state for reveal animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.translucent-box {
+  background: rgba(255, 255, 255, 0.85); /* Translucent white */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.translucent-box h2 {
+  color: #bd3364;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.translucent-box h2:hover {
+  transform: scale(1.05);
+  color: #d94d79;
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.translucent-box p {
+  color: #333333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.translucent-box p:hover {
+  transform: scale(1.02);
+  color: #d94d79;
+}
+
+/* Add smooth animations for all text elements */
+.fade-in * {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Specific hover effects for different text elements */
+.service-item:hover,
+.gallery-title:hover,
+.booking-title:hover,
+.testimonials-title:hover,
+.contact-title:hover,
+.social-media-title:hover {
+  transform: scale(1.05);
+  color: #d94d79;
+}
+
+/* Add hover effects for links */
+a {
+  color: #d94d79;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  transform: scale(1.05);
+  color: #ff6699;
+}
+
+/* Smooth animation for all text in pages */
+.fade-in h1,
+.fade-in h2,
+.fade-in p,
+.fade-in li,
+.fade-in a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Stagger the animations */
+.fade-in h1 { animation-delay: 0.2s; }
+.fade-in h2 { animation-delay: 0.3s; }
+.fade-in p { animation-delay: 0.4s; }
+.fade-in li { animation-delay: 0.5s; }
+.fade-in a { animation-delay: 0.6s; }
+
+:root {
+  --font-size-h2: clamp(1.8rem, 2vw + 1rem, 3rem);
+  --font-size-p: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+}
+
+/* Keep existing styles and add: */
+h2 {
+  font-size: var(--font-size-h2);
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+p, li {
+  font-size: var(--font-size-p);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-title {
+    font-size: 1.8rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Media Queries for Responsive Design */
+/* Mobile devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  p, li {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .translucent-box {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Cross-browser compatibility */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure smooth scrolling works across browsers */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Add touch action for mobile devices */
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+/* Ensure animations work across browsers */
+.fade-in {
+  -webkit-animation: fadeIn 1.2s ease-out forwards;
+  -moz-animation: fadeIn 1.2s ease-out forwards;
+  -o-animation: fadeIn 1.2s ease-out forwards;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Ensure transitions work across browsers */
+.translucent-box {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Fix background image display on iOS */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* Ensure proper image rendering */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  user-select: none;  /* Removed -o-user-drag and replaced user-drag */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure proper form element rendering */
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+/* Fix for Firefox */
+@-moz-document url-prefix() {
+  .fade-in {
+    opacity: 1;
+  }
+}
+
+/* Fix for Edge */
+@supports (-ms-ime-align: auto) {
+  .fade-in {
+    opacity: 1;
+  }
+}
+
+/* Fix for IE */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .fade-in {
+    opacity: 1;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: none;
+    color: #000;
+  }
+  
+  .navbar,
+  .footer {
+    display: none;
+  }
+  
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,36 @@
+.luxury-button {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem 1.5rem;
+  background-color: #d94d79; /* Darker luxury pink for buttons */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.luxury-button:hover {
+  background-color: #b33a61; /* Slightly darker pink on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.luxury-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.luxury-button:active::after {
+  opacity: 1;
+  transition: none;
+}

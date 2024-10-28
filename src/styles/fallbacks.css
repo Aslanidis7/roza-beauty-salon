@@ -1,0 +1,20 @@
+/* Fallback for browsers that don't support CSS Grid */
+.no-css-grid .gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Fallback for browsers that don't support Flexbox */
+.no-flexbox .navbar-links {
+  display: inline-block;
+}
+
+.no-flexbox .navbar-links li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+/* Fallback for browsers that don't support CSS transitions */
+.no-transitions * {
+  transition: none !important;
+}

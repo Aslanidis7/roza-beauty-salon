@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.5); /* More translucent white */
+  backdrop-filter: blur(10px); /* Glassy effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.4s ease; /* Smooth transition */
+}
+
+.navbar.shrink {
+  padding: 0.5rem 2rem;
+  background: rgba(255, 255, 255, 0.7); /* Slightly less translucent on scroll */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px); /* Enhanced blur effect */
+}
+
+.navbar-title {
+  color: #2f2f2f; /* Slightly darker gray for the main title */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a4a4a; /* Neutral gray for links */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-links li a:hover {
+  color: #d94d79; /* Luxurious dark pink on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Position below the text */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #ff6699; /* Luxurious pink color */
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for underline */
+}
+
+.navbar-links li a:hover::after {
+  width: 100%; /* Full width on hover */
+  left: 0; /* Align to the left */
+}
+
+.navbar.scrolled {
+  box-shadow: 0 6px 20px rgba(106, 13, 173, 0.3); /* Purple glow for scrolled state */
+  background: rgba(255, 255, 255, 0.9); /* White background on scroll */
+  backdrop-filter: blur(12px); /* Enhanced blur effect */
+}
+
+.navbar.shrink .navbar-title {
+  font-size: 2rem; /* Slightly smaller on scroll */
+}
