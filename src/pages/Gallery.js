@@ -10,10 +10,10 @@ import img5 from '../images/5.png';
 import img6 from '../images/6.png';
 import img7 from '../images/7.png';
 import img8 from '../images/8.png';
-import img9 from '../images/9.png'; // New image
-import img10 from '../images/10.png'; // New image
-import img11 from '../images/11.png'; // New image
-import img12 from '../images/12.png'; // New image
+import img9 from '../images/9.png';
+import img10 from '../images/10.png';
+import img11 from '../images/11.png';
+import img12 from '../images/12.png';
 
 function Gallery() {
   return (
@@ -28,10 +28,10 @@ function Gallery() {
         <img src={img6} alt="" className="gallery-image" />
         <img src={img7} alt="" className="gallery-image" />
         <img src={img8} alt="" className="gallery-image" />
-        <img src={img9} alt="" className="gallery-image" /> {/* New image */}
-        <img src={img10} alt="" className="gallery-image" /> {/* New image */}
-        <img src={img11} alt="" className="gallery-image" /> {/* New image */}
-        <img src={img12} alt="" className="gallery-image" /> {/* New image */}
+        <img src={img9} alt="" className="gallery-image" />
+        <img src={img10} alt="" className="gallery-image" />
+        <img src={img11} alt="" className="gallery-image" />
+        <img src={img12} alt="" className="gallery-image" />
       </div>
     </div>
   );
