@@ -2,10 +2,10 @@
   padding: 2rem;
   background: rgba(51, 51, 51, 0.8); /* Charcoal gray with transparency */
   color: #ffffff;
-  text-align: center;
+  text-align: center; /* Center align text */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center align items */
   gap: 1rem;
 }
 

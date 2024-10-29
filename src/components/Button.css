@@ -38,8 +38,8 @@
 /* Button adjustments for mobile */
 @media (max-width: 768px) {
   .luxury-button {
-    font-size: 0.9rem; /* Smaller font size */
-    padding: 8px 12px; /* Adjust padding */
+    font-size: 1rem; /* Adjust font size */
+    padding: 10px 15px; /* Increase padding for better touch targets */
     margin: 10px auto; /* Center align buttons */
   }
 }

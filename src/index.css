@@ -6,24 +6,30 @@
   transition: all 0.3s ease; /* Smooth transition for all elements */
 }
 
+body, html {
+  height: 100%; /* Ensure body and html take full height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Background image settings */
 body {
   font-family: 'Times New Roman', serif;
   background-image: url('./images/Background.png'); /* Use a relative path */
   background-size: cover; /* Cover the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent repeating */
-  background-attachment: fixed; /* Fixed background for a parallax effect */
+  background-attachment: fixed; /* Lock background to prevent movement */
   color: #333;
   margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
   text-align: center;
+  min-height: 100vh; /* Ensure body covers the full height of the viewport */
 }
 
 /* Portrait mode (mobile) */
 @media screen and (orientation: portrait) {
   body {
     background-image: url('./images/Backgroundphone.png'); /* Use mobile background */
-    background-attachment: scroll; /* Allow smooth scrolling */
+    background-attachment: fixed; /* Keep it fixed on scroll */
   }
 }
 
@@ -31,13 +37,14 @@ body {
 @media screen and (orientation: landscape) {
   body {
     background-image: url('./images/Background.png'); /* Use desktop background */
+    background-attachment: fixed; /* Keep it fixed on scroll */
   }
 }
 
 /* Fix for iOS background-attachment */
 @supports (-webkit-touch-callout: none) {
   body {
-    background-attachment: scroll;
+    background-attachment: fixed; /* Ensure it stays fixed on iOS */
   }
 }
 
@@ -431,7 +438,7 @@ p, li {
 /* General mobile adjustments */
 @media (max-width: 768px) {
   .section {
-    padding: 20px 15px; /* Adjust padding for mobile */
+    padding: 20px 10px; /* Compact section padding */
     margin: 0 auto; /* Center align sections */
   }
 
@@ -440,7 +447,7 @@ p, li {
   }
 
   p {
-    font-size: 1rem; /* Adjust paragraph size for mobile */
+    font-size: 0.9rem; /* Adjust paragraph size for mobile */
   }
 }
 
@@ -482,6 +489,7 @@ body, html {
   overflow-x: hidden; /* Ensures no horizontal scroll */
   padding: 0; /* Remove padding */
   margin: 0 auto; /* Center-align content */
+  text-align: center; /* Center align text */
 }
 
 /* Universal reset for mobile to prevent overflow */
@@ -508,12 +516,25 @@ body, html {
   }
 
   p {
-    font-size: 1rem; /* Body text size */
-    line-height: 1.4; /* Adjust line height for readability */
+    font-size: 0.9rem; /* Body text size */
+    line-height: 1.5; /* Adjust line height for readability */
   }
 
   /* Navbar font adjustments */
   .navbar a {
     font-size: 0.9rem; /* Smaller font size for navbar links */
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center; /* Center align all headings */
+}
+
+p, li {
+  text-align: center; /* Center align all paragraphs and list items */
+}
+
+/* Ensure all sections have a background that matches the main background */
+.section {
+  background: transparent; /* Or set to a matching color/image */
 }
