@@ -74,18 +74,15 @@
 /* Navbar adjustments for mobile */
 @media (max-width: 768px) {
   .navbar {
+    display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center align items */
-    padding: 1rem; /* Adjust padding for mobile */
+    padding: 10px 5px; /* Smaller padding */
   }
 
   .navbar a {
-    font-size: 1rem; /* Smaller font size */
-    padding: 10px 5px; /* Reduce padding */
-  }
-
-  /* Adjust logo and title size */
-  .navbar .navbar-title {
-    font-size: 1.5rem; /* Smaller title size for mobile */
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 5px; /* Smaller padding */
+    margin: 0; /* Remove margin */
   }
 }

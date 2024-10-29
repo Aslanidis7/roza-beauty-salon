@@ -23,12 +23,14 @@
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
   .gallery-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
-}
 
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
