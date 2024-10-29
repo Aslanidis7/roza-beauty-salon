@@ -14,7 +14,7 @@ body {
   background-position: center; /* Center the background image */
   color: #333;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   text-align: center;
 }
 
@@ -213,21 +213,25 @@ p, li {
 /* Media Queries for Responsive Design */
 /* Mobile devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Adjust font size for mobile */
   }
-  
+
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Adjust font size for mobile */
   }
-  
+
   p, li {
-    font-size: 1rem;
-    padding: 0 1rem;
+    font-size: 1rem; /* Adjust font size for mobile */
+    padding: 0 1rem; /* Adjust padding for mobile */
   }
 
   .container {
-    padding: 1rem;
+    padding: 1rem; /* Adjust container padding for mobile */
   }
 
   .translucent-box {

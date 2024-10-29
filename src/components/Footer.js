@@ -1,6 +1,6 @@
 import React from 'react';
-import FacebookLogo from '../images/Facebooklogo.png'; // Adjust path if necessary
-import InstagramLogo from '../images/Instagramlogo.png'; // Adjust path if necessary
+import FacebookLogo from '../images/Facebooklogo.png';
+import InstagramLogo from '../images/Instagramlogo.png';
 import './Footer.css';
 
 function Footer() {
