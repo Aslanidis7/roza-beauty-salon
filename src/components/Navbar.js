@@ -4,7 +4,6 @@ import './Navbar.css';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,19 +14,10 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <nav className={`navbar ${scrolled ? 'scrolled shrink' : ''}`}>
       <h1 className="navbar-title">Roza Beauty Salon</h1>
-      <div className="lg:hidden">
-        <button className="text-gray-500 hover:text-gray-700 focus:outline-none" onClick={toggleMenu}>
-          &#9776;
-        </button>
-      </div>
-      <ul className={`navbar-links ${isMenuOpen ? 'block' : 'hidden'} lg:flex`}>
+      <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/services">Services</Link></li>
         <li><Link to="/gallery">Gallery</Link></li>
