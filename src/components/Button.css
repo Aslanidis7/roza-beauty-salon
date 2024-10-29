@@ -34,3 +34,12 @@
   opacity: 1;
   transition: none;
 }
+
+/* Button adjustments for mobile */
+@media (max-width: 768px) {
+  .luxury-button {
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 8px 12px; /* Adjust padding */
+    margin: 10px auto; /* Center align buttons */
+  }
+}

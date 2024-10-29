@@ -17,3 +17,12 @@
   transform: scale(1.1); /* Slightly enlarge on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
+
+/* Social media icons */
+@media (max-width: 768px) {
+  .social-icon {
+    width: 32px; /* Smaller size for mobile */
+    height: 32px; /* Maintain aspect ratio */
+    margin: 5px; /* Adjust margin */
+  }
+}
