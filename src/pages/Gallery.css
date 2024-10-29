@@ -10,9 +10,18 @@
   width: 200px;
   height: 200px;
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+.gallery-image.fade-in {
+  opacity: 1;
+}
+
+.gallery-image.hidden {
+  display: none;
 }
 
 .gallery-image:hover {

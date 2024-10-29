@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Gallery.css'; // Ensure you have the correct CSS file for styling
 
 // Import images
@@ -16,22 +16,27 @@ import img11 from '../images/11.png'; // New image
 import img12 from '../images/12.png'; // New image
 
 function Gallery() {
+  const [loadedImages, setLoadedImages] = useState(Array(12).fill(false)); // Track loaded images
+
+  const handleImageLoad = (index) => {
+    const newLoadedImages = [...loadedImages];
+    newLoadedImages[index] = true; // Mark the image as loaded
+    setLoadedImages(newLoadedImages);
+  };
+
   return (
     <div className="fade-in">
       <h2>Our Gallery</h2>
       <div className="gallery-grid">
-        <img src={img1} alt="" className="gallery-image" />
-        <img src={img2} alt="" className="gallery-image" />
-        <img src={img3} alt="" className="gallery-image" />
-        <img src={img4} alt="" className="gallery-image" />
-        <img src={img5} alt="" className="gallery-image" />
-        <img src={img6} alt="" className="gallery-image" />
-        <img src={img7} alt="" className="gallery-image" />
-        <img src={img8} alt="" className="gallery-image" />
-        <img src={img9} alt="" className="gallery-image" /> {/* New image */}
-        <img src={img10} alt="" className="gallery-image" /> {/* New image */}
-        <img src={img11} alt="" className="gallery-image" /> {/* New image */}
-        <img src={img12} alt="" className="gallery-image" /> {/* New image */}
+        {[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12].map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt=""
+            className={`gallery-image ${loadedImages[index] ? 'fade-in' : 'hidden'}`} // Apply fade-in class if loaded
+            onLoad={() => handleImageLoad(index)} // Handle image load
+          />
+        ))}
       </div>
     </div>
   );
