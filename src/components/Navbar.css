@@ -70,3 +70,22 @@
 .navbar.shrink .navbar-title {
   font-size: 2rem; /* Slightly smaller on scroll */
 }
+
+/* Navbar adjustments for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    padding: 1rem; /* Adjust padding for mobile */
+  }
+
+  .navbar a {
+    font-size: 1rem; /* Smaller font size */
+    padding: 10px 5px; /* Reduce padding */
+  }
+
+  /* Adjust logo and title size */
+  .navbar .navbar-title {
+    font-size: 1.5rem; /* Smaller title size for mobile */
+  }
+}

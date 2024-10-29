@@ -10,12 +10,35 @@ body {
   font-family: 'Times New Roman', serif;
   background-image: url('./images/Background.png'); /* Use a relative path */
   background-size: cover; /* Cover the entire viewport */
-  background-attachment: fixed; /* Fixed background for a parallax effect */
   background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-attachment: fixed; /* Fixed background for a parallax effect */
   color: #333;
   margin: 0;
   overflow-x: hidden; /* Prevent horizontal scrolling */
   text-align: center;
+}
+
+/* Portrait mode (mobile) */
+@media screen and (orientation: portrait) {
+  body {
+    background-image: url('./images/Backgroundphone.png'); /* Use mobile background */
+    background-attachment: scroll; /* Allow smooth scrolling */
+  }
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) {
+  body {
+    background-image: url('./images/Background.png'); /* Use desktop background */
+  }
+}
+
+/* Fix for iOS background-attachment */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 h1, h2 {
@@ -402,5 +425,21 @@ p, li {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .container {
     padding: 2rem;
+  }
+}
+
+/* General mobile adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 20px 15px; /* Adjust padding for mobile */
+    margin: 0 auto; /* Center align sections */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem; /* Adjust heading sizes for mobile */
+  }
+
+  p {
+    font-size: 1rem; /* Adjust paragraph size for mobile */
   }
 }
